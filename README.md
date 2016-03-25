@@ -1,6 +1,15 @@
 # Scrapy-Statsd
 Publish Scrapy stats to statsd daemon to see your spider stats in real time.
 
+**Table of Contents**
+
+- [Scrapy-Statsd](#)
+- [Details](#)
+	- [Stat Names](#)
+	- [Value Types](#)
+	- [Start Ignored for Counters](#)
+- [Installation](#)
+
 # Details
 Exporting scrapy's metrics into statsd required was not a perfect one to one mapping. The naming conventions and values some adjustment. Please, see them below. 
 ## Stat Names
