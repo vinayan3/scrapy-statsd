@@ -29,15 +29,17 @@ The operations increment or decrement do not use the parameter start. Scrapy has
  
 # Installation
 1. Pip install the package 
-```
-pip install scrapy-statsd
-```
-_Note:The requirements state Scrapy version 1.0.5 but that'll be reduce once testing is done._
 
-2. Add the following lines to your `settings.py` of your Scrapy project 
-```
-STATS_CLASS = 'scrapy_statsd.statscollectors.StatsDStatsCollector'
+    ```
+    pip install scrapy-statsd
+   ```
+   _Note: The requirements state Scrapy version 1.0.5 but that'll be reduce once testing is done._
+
+1. Add the following lines to your `settings.py` of your Scrapy project 
+
+    ```
+    STATS_CLASS = 'scrapy_statsd.statscollectors.StatsDStatsCollector'
  
-STATSD_HOST = 'localhost'
-STATSD_PORT = 8125
-```
+    STATSD_HOST = 'localhost'
+    STATSD_PORT = 8125
+   ```
