@@ -34,7 +34,7 @@ pip install scrapy-statsd
 ```
 _Note:The requirements state Scrapy version 1.0.5 but that'll be reduce once testing is done._
 
-1. Add the following lines to your `settings.py` of your Scrapy project 
+2. Add the following lines to your `settings.py` of your Scrapy project 
 ```
 STATS_CLASS = 'scrapy_statsd.statscollectors.StatsDStatsCollector'
  
