@@ -28,17 +28,11 @@ Only numeric types are exported to statsd. No other types are exported. One migh
 The operations increment or decrement do not use the parameter start. Scrapy has a notion that the stats are being collected in a single dictionary where you can check if the value has been set. Statsd doesn't act like a key value store. There is no mechanism to check if a value has been set for a given metric.
  
 # Installation
-1. Clone the repo into a location which is on the `PYTHONPATH` 
+1. Pip install the package 
 ```
-git clone git@github.com:vinayan3/scrapy-statsd.git
+pip install scrapy-statsd
 ```
-
-1. Pip install dependencies
-```
-cd ~/work/scrapy-statsd/scrapy_statds
-pip install -r requirements.txt
-```
-_Note:The requirements state Scrapy version 1.05 but that'll be reduce once testing is done._
+_Note:The requirements state Scrapy version 1.0.5 but that'll be reduce once testing is done._
 
 1. Add the following lines to your `settings.py` of your Scrapy project 
 ```
@@ -47,5 +41,3 @@ STATS_CLASS = 'scrapy_statsd.statscollectors.StatsDStatsCollector'
 STATSD_HOST = 'localhost'
 STATSD_PORT = 8125
 ```
-
-_Note: This process will get better once I get this into pip._
