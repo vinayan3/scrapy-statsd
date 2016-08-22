@@ -1,6 +1,7 @@
 from twisted.internet.threads import deferToThread
 import scrapy.statscollectors
 import statsd
+import six
 
 class StatsDStatsCollector(scrapy.statscollectors.MemoryStatsCollector):
     """
@@ -18,11 +19,7 @@ class StatsDStatsCollector(scrapy.statscollectors.MemoryStatsCollector):
     ever set.
     """
 
-    NUMERIC_TYPES = [
-        int,
-        float,
-        long
-    ]
+    NUMERIC_TYPES = six.integer_types + (float,)
 
     def __init__(self, crawler):
         super(StatsDStatsCollector, self).__init__(crawler)
