@@ -32,10 +32,13 @@ setup(
         'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 2.6',
         'Programming Language :: Python :: 2.7',
+        'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
     keywords='scrapy stats',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=[
+        'six',
         'Scrapy>=1.0.5',
         'statsd==3.2.1'
     ],
