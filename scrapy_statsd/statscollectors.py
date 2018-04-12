@@ -27,12 +27,15 @@ class StatsDStatsCollector(scrapy.statscollectors.MemoryStatsCollector):
         self._statsd_client = statsd.StatsClient(
             host=crawler.settings.get('STATSD_HOST', 'localhost'),
             port=crawler.settings.getint('STATSD_PORT', 8125))
+        self.escape_dots = crawler.settings.get('STATSD_ESCAPE_DOTS')
 
     @classmethod
     def _is_numeric_type(cls, value):
         return type(value) in cls.NUMERIC_TYPES
 
     def _dotted_key(self, key, spider):
+        if self.escape_dots:
+            key = key.replace('.', self.escape_dots)
         new_key = key.replace('/', '.')
         return '%s.%s' % (spider.name, new_key) if spider is not None else new_key
 
