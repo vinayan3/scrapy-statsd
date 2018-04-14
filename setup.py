@@ -18,7 +18,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='scrapy-statsd',
-    version='1.0.0a1',
+    version='1.0.1',
     description='Publish Scrapy stats to statsd',
     long_description=long_description,
     url='https://github.com/vinayan3/scrapy-statsd',
@@ -34,8 +34,9 @@ setup(
         'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
+        'Programming Language :: Python :: 3.6',
     ],
-    keywords='scrapy stats',
+    keywords='scrapy stats stats',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     install_requires=[
         'six',
